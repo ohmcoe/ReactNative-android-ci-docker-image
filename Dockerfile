@@ -55,10 +55,10 @@ RUN cd /opt && \
     unzip ${ANDROID_SDK_FILENAME} -d ./android-sdk-linux && \
     rm ${ANDROID_SDK_FILENAME} && \
     yes | sdkmanager --licenses && \
-    sdkmanager "tools" "platform-tools"  && \
-    sdkmanager "platforms;android-28" && \
-    sdkmanager "build-tools;28.0.0" "build-tools;27.0.3" "build-tools;25.0.3" "build-tools;25.0.2" && \
-    sdkmanager "extras;android;m2repository" "extras;google;m2repository"
+    yes | sdkmanager "tools" "platform-tools"  && \
+    yes | sdkmanager "platforms;android-28" && \
+    yes | sdkmanager "build-tools;28.0.0" "build-tools;27.0.3" "build-tools;25.0.3" "build-tools;25.0.2" && \
+    yes | sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 
 # ——————————
 # Installs Gradle
