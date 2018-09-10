@@ -57,7 +57,7 @@ RUN cd /opt && \
     yes | sdkmanager --licenses && \
     yes | sdkmanager "tools" "platform-tools"  && \
     yes | sdkmanager "platforms;android-28" && \
-    yes | sdkmanager "build-tools;28.0.0" "build-tools;27.0.3" "build-tools;25.0.3" "build-tools;25.0.2" && \
+    yes | sdkmanager "build-tools;28.0.2" "build-tools;27.0.3" "build-tools;25.0.3" "build-tools;25.0.2" && \
     yes | sdkmanager "extras;android;m2repository" "extras;google;m2repository"
 
 # ——————————
@@ -81,7 +81,7 @@ ENV PATH $PATH:$GRADLE_HOME/bin
 # ——————————
 # Install Node and global packages
 # ——————————
-ENV NODE_VERSION 9.11.1
+ENV NODE_VERSION 10.10.0 
 RUN cd && \
     wget -q http://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz && \
     tar -xzf node-v${NODE_VERSION}-linux-x64.tar.gz && \
